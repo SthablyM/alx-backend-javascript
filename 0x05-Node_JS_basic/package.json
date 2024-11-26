@@ -1,0 +1,12 @@
+{
+  "name": "0x05-Node_JS_basic",
+  "version": "1.0.0",
+  "description": "0x05. NodeJS Basics",
+  "main": "0-console.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
