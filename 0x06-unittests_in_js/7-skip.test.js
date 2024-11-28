@@ -1,40 +1,35 @@
-const assert = require('assert');
+const { expect } = require('chai');
 
-describe('Skipped Tests Example Suite', function () {
-  
-  it('should run this test and pass', function () {
-    assert.strictEqual(1 + 1, 2);
+describe('Testing numbers', () => {
+  it('1 is equal to 1', () => {
+    expect(1 === 1).to.be.true;
   });
 
-  it.skip('should skip this test and not run', function () {
-    // This test will be skipped
-    assert.strictEqual(1 + 2, 3);
+  it('2 is equal to 2', () => {
+    expect(2 === 2).to.be.true;
   });
 
-  it('should also run this test and pass', function () {
-    assert.strictEqual(2 + 2, 4);
+  it.skip('1 is equal to 3', () => {
+    expect(1 === 3).to.be.true;
   });
 
-  describe.skip('Skipped Nested Suite', function () {
-    it('should skip this nested test', function () {
-      assert.strictEqual(3 + 3, 6);
-    });
+  it('3 is equal to 3', () => {
+    expect(3 === 3).to.be.true;
   });
 
-  describe('Conditional Skipped Suite', function () {
-    before(function () {
-      const shouldSkip = true;
-      if (shouldSkip) {
-        this.skip();
-      }
-    });
+  it('4 is equal to 4', () => {
+    expect(4 === 4).to.be.true;
+  });
 
-    it('should skip this test based on a condition', function () {
-      assert.strictEqual(4 + 4, 8);
-    });
+  it('5 is equal to 5', () => {
+    expect(5 === 5).to.be.true;
+  });
 
-    it('should also skip this test based on a condition', function () {
-      assert.strictEqual(5 + 5, 10);
-    });
+  it('6 is equal to 6', () => {
+    expect(6 === 6).to.be.true;
+  });
+
+  it('7 is equal to 7', () => {
+    expect(7 === 7).to.be.true;
   });
 });
